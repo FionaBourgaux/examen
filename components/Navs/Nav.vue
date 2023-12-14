@@ -5,7 +5,7 @@ const isOpen = ref(false);
 <template>
   <nav>
     <div
-      class="flex md:flex-col items-center justify-between bg-[#1640D6] md:space-y-6 py-6 px-4 border-b border-white"
+      class="flex md:flex-col items-center justify-between bg-black md:space-y-6 py-6 px-4 border-b border-white"
     >
       <div>
         <nuxt-link to="/">
@@ -14,7 +14,7 @@ const isOpen = ref(false);
       </div>
       <div class="">
         <ul
-          class="hidden md:flex items-center justify-between space-x-8 text-gray-300 text-xl"
+          class="hidden md:flex items-center justify-between space-x-8 text-black text-xl"
         >
           <slot name="links"></slot>
         </ul>

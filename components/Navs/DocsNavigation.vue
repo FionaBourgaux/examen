@@ -1,7 +1,7 @@
 <template>
   <NavsNav>
     <template #logo>
-      <TitresLogo>Design System</TitresLogo>
+      <img> 
     </template>
 
     <template #links>
