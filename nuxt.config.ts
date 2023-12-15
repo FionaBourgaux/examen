@@ -13,4 +13,18 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: ["assets/font.css", "remixicon/fonts/remixicon.css"],
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          fontFamily: {
+            titre: ["Koulen"],
+            serif: [""],
+          },
+        },
+      },
+    },
+  },
 });
+

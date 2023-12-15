@@ -8,6 +8,15 @@ query Pages {
       html
     }
   }
+  produits {
+    id
+    nom
+    
+    slug
+    photo {
+      url
+    }
+  }
 }
 
 `;
@@ -16,30 +25,46 @@ const contenuAccueil = ref();
 const { data } = await useAsyncQuery(query);
 console.log(data.value);
 contenuAccueil.value = data.value.page;
+
+const produits = ref();
+
+produits.value = data.value.produits;
 </script>
 
 <template>
-<h2> 
+  <div class="relative space-x-6 space-y-32">
+  <NuxtImg
+              class="h-[80vh] w-full object-cover"
+        src="/images/vr.jpg"
+        alt="banner"
+      />
+<h2 class="text-4xl text-white absolute top-12 font-titre"> 
     {{ contenuAccueil.titre }}
 </h2>
 
-<div v-html="contenuAccueil.texte.html"> </div>
+<div class="absolute text-2xl text-white top-24" v-html="contenuAccueil.texte.html"> </div>
 
-<ul
-    v-if="produit"
-    class="grid gap-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 p-12"
-  >
-    <li v-for="produit in produits" :key="produit.id">
-      <NuxtLink :to="`/produit/${produit.slug}`">
-        <NuxtImg 
-        class="shadow-2xl shadow-[#2D033B] hover:animate-bounce"
-        :src="produit.image.url"
-         :alt="produit.nom" />
-        <h2 class="text-3xl text-center p-5 hover:scale-125">{{ produit.nom }}</h2>
-      </NuxtLink>
-    </li>
-  </ul>
-  <ul v-else>
-    <li>Loading...</li>
-  </ul>
+</div>
+<div v-if="produits" class="p-10 grid sm:grid-cols-3 gap-8">
+  <div v-for="produit in produits">
+ <NuxtLink :to="`/produit/${produit.slug}`">
+      <NuxtImg
+        class="shadow-xl shadow-black lg:w-2/3 mx-auto m-10 aspect-square "
+        :src="produit.photo.url"
+        :alt="produit.nom"
+      />
+ </NuxtLink>
+    <div class="m-10 ">
+      <h2 class="text-3xl text-center pb-10 font-sans text-black">{{ produit.nom }}</h2>
+
+      <div class="text-center items-center object-center text-black grid grid-cols-2">
+      <div class="grid text-center p-5 items-center object-center ">
+      
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+   
 </template>

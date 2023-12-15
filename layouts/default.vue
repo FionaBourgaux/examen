@@ -7,16 +7,25 @@
     <template #navigation>
       <NavsNav>
         <template #logo>
-          <TitresLogo>Paws & Play VR</TitresLogo>
+          <TitresLogo> 
+             <NuxtImg
+            class="h-16 w-16"
+        src="/images/logo.jpeg"
+        alt="logo"
+      />
+            <div> Paws & Play VR</div>
+
+           
+          </TitresLogo>
         </template>
 
         <template #links>
           <LinksNavLink to="/">Accueil</LinksNavLink>
-          <LinksNavLink to="/docs">Produits</LinksNavLink>
-          <LinksNavLink to="/docs"> Société </LinksNavLink>
-          <LinksNavLink to="/docs"> Equipe </LinksNavLink>
-          <LinksNavLink to="/docs"> Contact </LinksNavLink>
-          <LinksNavLink to="/docs"> Blog </LinksNavLink>
+          <LinksNavLink to="/produit">Produits</LinksNavLink>
+          <LinksNavLink to="/societe"> Société </LinksNavLink>
+          <LinksNavLink to="/equipe"> Equipe </LinksNavLink>
+          <LinksNavLink to="/contact"> Contact </LinksNavLink>
+          <LinksNavLink to="/blog"> Blog </LinksNavLink>
 
 
         </template>

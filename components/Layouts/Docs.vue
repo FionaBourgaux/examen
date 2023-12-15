@@ -1,7 +1,7 @@
 <template>
   <LayoutsBase>
     <template #navigation>
-      <NavsDocsNavigation />
+      <Nav/>
     </template>
 
     <template #content>

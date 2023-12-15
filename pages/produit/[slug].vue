@@ -4,6 +4,7 @@ const query = gql`
     produit(where: { slug: $slug }) {
       id
       nom
+      slug
       description
       caracteristique {
         html
@@ -16,7 +17,7 @@ const query = gql`
   }
 `;
 
-const produits = ref();
+const produit = ref();
 
 const route = useRoute();
 const { data } = await useAsyncQuery(query, {
@@ -24,36 +25,31 @@ const { data } = await useAsyncQuery(query, {
 });
 
 console.log(data.value);
-produits.value = data.value.produit;
+produit.value = data.value.produit;
 </script>
 
 <template>
- <div v-if="produit" class="p-10 grid sm:grid-cols-2 gap-8">
-  <div v-for="produit in produits">
+ <div v-if="produit" class="p-10 grid grid-cols-2">
+  
  <div class="">
       <NuxtImg
-        class="shadow-xl shadow-black lg:w-2/3 mx-auto m-10 aspect-square hover:scale-110 hover:transition"
-        :src="produit.image.url"
+        class="shadow-xl shadow-black lg:w-1/2 mx-auto m-10 aspect-square hover:scale-110 hover:transition items-center"
+        :src="produit.photo.url"
         :alt="produit.nom"
       />
     </div>
 
-    <div class="m-10 ">
-      <h2 class="text-3xl text-center pb-10 font-sans">{{ produit.nom }}</h2>
+    <div class="m-10 items-center ">
+      <h2 class="text-3xl text-center  font-sans">{{ produit.nom }}</h2>
 
-      <div class="grid grid-cols-4 p-5 text-center items-center object-center ">
-      <h3><i class="ri-heart-pulse-fill"></i> {{ produit.prix }}</h3>
-      <img
-        class="h-10 w-10 mt2"
-        :src="produit.image.url"
-        :alt="produit.nom"
-      />
+      <div class="grid text-center p-5 items-center object-center ">
+      <h3 class="text-black text-3xl"><i class="ri-money-euro-circle-line"></i> {{ produit.prix }}</h3>
       </div>
-      <p class="">{{ produit.description }}</p>
-      <p class="">{{ produit.caracteristique}}</p>
+      <TextesParagraphe class="">{{ produit.description }}</TextesParagraphe>
+      <TextesParagraphe class="" v-html="produit.caracteristique.html"> </TextesParagraphe>
     </div>
   </div>
-  </div>
+  
    
   <div v-else>
     <li>Loading...</li>

@@ -5,16 +5,16 @@ const isOpen = ref(false);
 <template>
   <nav>
     <div
-      class="flex md:flex-col items-center justify-between bg-black md:space-y-6 py-6 px-4 border-b border-white"
+      class="flex bg-black justify-between items-center p-8"
     >
-      <div>
-        <nuxt-link to="/">
+      <div class="">
+        <nuxt-link class="" to="/">
           <slot name="logo"> </slot>
         </nuxt-link>
       </div>
       <div class="">
         <ul
-          class="hidden md:flex items-center justify-between space-x-8 text-black text-xl"
+          class="hidden md:flex space-x-8 text-[#4FC0D0] text-xl"
         >
           <slot name="links"></slot>
         </ul>
@@ -30,7 +30,7 @@ const isOpen = ref(false);
     </div>
     <div class="" v-if="isOpen">
       <ul
-        class="md:hidden flex flex-col py-8 px-4 space-y-2 border-b border-white bg-gray-200/75 text-black transition-all text-xl"
+        class="md:hidden flex flex-col py-8 px-4 space-y-2 border-b border-white bg-gray-200/75 text-[#4FC0D0] transition-all text-xl"
       >
         <slot name="links"></slot>
       </ul>
