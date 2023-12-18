@@ -1,6 +1,6 @@
 <template>
   <h1
-    class="text-3xl text-black font-titre "
+    class="text-3xl text-black font-bold "
   >
     <slot />
   </h1>
