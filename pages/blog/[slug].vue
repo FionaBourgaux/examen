@@ -2,7 +2,9 @@
 const query = gql`
   query blog($slug: String!) {
     blog(where: { slug: $slug }) {
-      contenuBlog
+      contenuBlog {
+        html
+      }
       id
       titreBlog
       imageBlog {
@@ -27,7 +29,7 @@ article.value = data.value.blog;
   <div v-if="article" class="p-10">
     <div class="">
       <NuxtImg
-        class="aspect-square items-center h-[50vh] w-full object-cover"
+        class="aspect-square h-[50vh] w-full object-cover"
         :src="article.imageBlog.url"
         :alt="article.nom"
       />
@@ -37,7 +39,8 @@ article.value = data.value.blog;
       <h2 class="text-3xl text-center font-sans">{{ article.TitreBlog }}</h2>
 
       <div class="grid text-center p-5 items-center object-center"></div>
-      <TextesParagraphe class="">{{ article.contenuBlog }}</TextesParagraphe>
+      <p class="text-black" v-html="article.contenuBlog.html">
+      </p>
     </div>
   </div>
 

@@ -33,10 +33,10 @@ articles.value = data.value.blogs;
     <div v-for="article in articles">
       <NuxtLink
         :to="`/blog/${article.slug}`"
-        class="flex items-top rounded overflow-hidden shadow-lg"
+        class="flex items-top rounded overflow-hidden shadow-lg p-10"
       >
         <NuxtImg
-          class="w-1/6 aspect-square"
+          class="w-1/5 aspect-square"
           :src="article.imageBlog.url"
           :alt="article.nom"
         />
