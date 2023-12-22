@@ -1,10 +1,17 @@
 <template>
 
-  <div class="">
-  <h2>À Propos de Nous</h2>
+  <div class=" grid grid-cols-2">
+
+    <NuxtImg class="h- w- m-10" src="/images/persona-8.jpeg" alt="équipe" />
+    
+    <div class="m-10">
+  <TitresH2>À Propos de Nous</TitresH2>
   <TextesParagraphe class="text-black">
    Fondée en [Année de Fondation], Paws & Play VR est à l'avant-garde de l'innovation en offrant une expérience inédite dans le monde de la réalité virtuelle pour les propriétaires d'animaux de compagnie.
   </TextesParagraphe>
+  </div>
+
+
   <TitresH2> Notre vision</TitresH2>
   <TextesParagraphe>
    Chez Paws & Play VR, nous croyons que chaque moment passé avec nos animaux de compagnie devrait être une aventure mémorable. Notre vision est de créer une connexion unique entre les humains et les animaux à travers des expériences de jeu en réalité virtuelle ludiques et stimulantes.
@@ -16,7 +23,13 @@
    Nos casques VR spécialement conçus et nos jouets connectés offrent une immersion totale dans des mondes virtuels colorés, encourageant l'activité physique et mentale de vos compagnons à quatre pattes tout en renforçant les liens affectifs.
   </TextesParagraphe>
 
-   <TitresH2> Nos Produits</TitresH2>
+  <TitresH2> Engagement Éthique </TitresH2>
+  
+  <TextesParagraphe>
+  Chez Paws & Play VR, nous sommes déterminés à assurer le bien-être de tous les animaux. Nos produits sont conçus en collaboration avec des vétérinaires et des comportementalistes animaliers pour garantir une expérience sécurisée et enrichissante.
+  </TextesParagraphe>
+
+   <TitresH2> Communauté Paws & Play </TitresH2>
 
    <TextesParagraphe>
    Rejoignez notre communauté grandissante de passionnés d'animaux partageant des moments uniques avec leurs compagnons. Suivez-nous sur les réseaux sociaux pour découvrir des témoignages inspirants et des aventures virtuelles captivantes.

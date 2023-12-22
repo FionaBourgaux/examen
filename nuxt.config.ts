@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         extend: {
           fontFamily: {
             titre: ["Koulen"],
-            serif: [""],
+            serif: ["Mandali"],
           },
         },
       },

@@ -23,7 +23,7 @@
           <LinksNavLink to="/">Accueil</LinksNavLink>
           <LinksNavLink to="/produit">Produits</LinksNavLink>
           <LinksNavLink to="/societe"> Société </LinksNavLink>
-          <LinksNavLink to="/equipe"> Equipe </LinksNavLink>
+          <LinksNavLink to="/equipe"> Équipe </LinksNavLink>
           <LinksNavLink to="/contact"> Contact </LinksNavLink>
           <LinksNavLink to="/blog"> Blog </LinksNavLink>
 

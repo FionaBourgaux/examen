@@ -32,17 +32,18 @@ produits.value = data.value.produits;
 </script>
 
 <template>
-  <div class="relative space-x-6 space-y-32">
+  <div class="relative space-x-6 space-y-3">
   <NuxtImg
               class="h-[80vh] w-full object-cover"
         src="/images/vr.jpg"
         alt="banner"
       />
-<h2 class="text-4xl text-white absolute top-12 font-titre"> 
+<h2 class="text-5xl text-white absolute top-12 pt-52
+ font-titre"> 
     {{ contenuAccueil.titre }}
 </h2>
 
-<div class="absolute text-2xl text-white top-24" v-html="contenuAccueil.texte.html"> </div>
+<div class="absolute text-2xl text-white top-24 pt-52" v-html="contenuAccueil.texte.html"> </div>
 
 </div>
 <div v-if="produits" class="p-10 grid sm:grid-cols-3 gap-8">
