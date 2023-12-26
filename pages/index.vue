@@ -60,12 +60,12 @@ Plongez dans notre catalogue et découvrez comment Paws & Play VR transforme la 
   <div v-for="produit in produits">
  <NuxtLink :to="`/produit/${produit.slug}`">
       <NuxtImg
-        class="shadow-xl shadow-black lg:w-2/3 mx-auto m-10 aspect-square "
+        class=" hover:shadow-white hover:scale-125 shadow-xl shadow-black lg:w-2/3 mx-auto m-10 aspect-square "
         :src="produit.photo.url"
         :alt="produit.nom"
       />
  </NuxtLink>
-    <div class="m-10 ">
+    <div class="m-16 ">
       <h2 class="text-3xl text-center pb-10 font-sans text-black">{{ produit.nom }}</h2>
 
       <div class="text-center items-center object-center text-black grid grid-cols-2">
@@ -79,10 +79,11 @@ Plongez dans notre catalogue et découvrez comment Paws & Play VR transforme la 
   </div>
   </div>
 
+  <div class=" ">
    <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-full mt-6"
+          class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-full mt-6"
         >
-          Voir plus
+          Voir produits
         </button>
- 
+ </div>
 </template>
