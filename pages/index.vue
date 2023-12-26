@@ -45,7 +45,17 @@ produits.value = data.value.produits;
 
 <div class="absolute text-2xl text-white top-24 pt-52" v-html="contenuAccueil.texte.html"> </div>
 
+<button
+          class=" bottom-36 absolute bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full mt-6 "
+        >
+          Voir plus
+        </button>
 </div>
+
+<TitresH1 class="text-black "> Découvrez l'Univers Captivant de Paws & Play VR</TitresH1>
+<TextesParagraphe class="text-center m-10 text-2xl"> 
+Explorez notre collection soigneusement élaborée de casques, jouets connectés et accessoires qui ouvrent la porte à un tout nouveau monde d'interaction avec vos animaux de compagnie. Chaque produit est le fruit d'une passion partagée pour la technologie et l'amour inconditionnel envers nos amis à poils.
+Plongez dans notre catalogue et découvrez comment Paws & Play VR transforme la façon dont vous interagissez avec vos animaux, offrant une dimension nouvelle et passionnante à chaque instant partagé.</TextesParagraphe>
 <div v-if="produits" class="p-10 grid sm:grid-cols-3 gap-8">
   <div v-for="produit in produits">
  <NuxtLink :to="`/produit/${produit.slug}`">
@@ -65,7 +75,14 @@ produits.value = data.value.produits;
       </div>
       
     </div>
+    
   </div>
   </div>
-   
+
+   <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-full mt-6"
+        >
+          Voir plus
+        </button>
+ 
 </template>
