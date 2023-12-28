@@ -22,12 +22,13 @@ produits.value = data.value.produits;
 </script>
 
 <template>
-  <TextesParagraphe> Bienvenue dans notre showroom virtuel, où l'extraordinaire rencontre l'ordinaire pour créer des expériences qui transcendent la réalité. Chez Paws & Play VR, nous sommes fiers de présenter une gamme innovante de produits de réalité virtuelle conçus spécialement pour vos compagnons à quatre pattes.</TextesParagraphe>
- <div v-if="produits" class="p-10 grid sm:grid-cols-2 gap-8">
+  <TitresH1> Nos produits </TitresH1>
+  <TextesParagraphe class="text-center text-xl p-3"> Bienvenue dans notre showroom virtuel, où l'extraordinaire rencontre l'ordinaire pour créer des expériences qui transcendent la réalité. Chez Paws & Play VR, nous sommes fiers de présenter une gamme innovante de produits de réalité virtuelle conçus spécialement pour vos compagnons à quatre pattes.</TextesParagraphe>
+ <div v-if="produits" class="p-10 grid sm:grid-cols-3 gap-8">
   <div v-for="produit in produits">
  <NuxtLink :to="`/produit/${produit.slug}`">
       <NuxtImg
-        class="shadow-xl shadow-black lg:w-1/3 mx-auto m-10 aspect-square hover:scale-110 hover:transition"
+        class="shadow-xl shadow-black lg:w-1/2 mx-auto m-10 aspect-square hover:scale-110 hover:transition"
         :src="produit.photo.url"
         :alt="produit.nom"
       />

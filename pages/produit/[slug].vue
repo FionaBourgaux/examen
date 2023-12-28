@@ -39,15 +39,28 @@ produit.value = data.value.produit;
       />
     </div>
 
-    <div class="m-10 items-center ">
-      <h2 class="text-3xl text-center  font-sans">{{ produit.nom }}</h2>
+    <div class="m-10 text-black ">
+      <h2 class="text-3xl font-sans">{{ produit.nom }}</h2>
 
-      <div class="grid text-center p-5 items-center object-center ">
-      <h3 class="text-black text-3xl"><i class="ri-money-euro-circle-line"></i> {{ produit.prix }}</h3>
+      <div class="grid p-5 ">
+      <h3 class="text-black text-2xl"><i class="ri-money-euro-circle-line"></i> {{ produit.prix }}</h3>
       </div>
-      <TextesParagraphe class="">{{ produit.description }}</TextesParagraphe>
+      <TextesParagraphe class="m-2">{{ produit.description }}</TextesParagraphe>
       <TextesParagraphe class="" v-html="produit.caracteristique.html"> </TextesParagraphe>
+      <div class="grid grid-cols-2 gap-16 mt-10">
+       <button
+          class=" m-18 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full mt-6"
+        >
+        Acheter
+        </button>
+        <button
+          class=" m-18 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full mt-6"
+        >
+        Retour
+        </button>
+        </div>
     </div>
+
   </div>
   
    

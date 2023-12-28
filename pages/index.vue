@@ -1,14 +1,14 @@
 <script setup>
 const query = gql`
 query Pages {
-  page(where: {slug: "accueil"}) {
+  page(where: {slug: "accueil"}){
     id
     titre
     texte {
       html
     }
   }
-  produits {
+  produits(orderBy: id_ASC, first: 3) {
     id
     nom
     
@@ -44,19 +44,19 @@ produits.value = data.value.produits;
 </h2>
 
 <div class="absolute text-2xl text-white top-24 pt-52" v-html="contenuAccueil.texte.html"> </div>
+</div>
 
 <button
-          class=" bottom-36 absolute bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full mt-6 "
+          class=" bottom-40 absolute bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-12 rounded-full ml-16 text-xl"
         >
           Voir plus
         </button>
-</div>
 
 <TitresH1 class="text-black "> Découvrez l'Univers Captivant de Paws & Play VR</TitresH1>
 <TextesParagraphe class="text-center m-10 text-2xl"> 
 Explorez notre collection soigneusement élaborée de casques, jouets connectés et accessoires qui ouvrent la porte à un tout nouveau monde d'interaction avec vos animaux de compagnie. Chaque produit est le fruit d'une passion partagée pour la technologie et l'amour inconditionnel envers nos amis à poils.
 Plongez dans notre catalogue et découvrez comment Paws & Play VR transforme la façon dont vous interagissez avec vos animaux, offrant une dimension nouvelle et passionnante à chaque instant partagé.</TextesParagraphe>
-<div v-if="produits" class="p-10 grid sm:grid-cols-3 gap-8">
+<div v-if="produits" class=" grid sm:grid-cols-3 gap-8">
   <div v-for="produit in produits">
  <NuxtLink :to="`/produit/${produit.slug}`">
       <NuxtImg
@@ -67,23 +67,15 @@ Plongez dans notre catalogue et découvrez comment Paws & Play VR transforme la 
  </NuxtLink>
     <div class="m-16 ">
       <h2 class="text-3xl text-center pb-10 font-sans text-black">{{ produit.nom }}</h2>
-
-      <div class="text-center items-center object-center text-black grid grid-cols-2">
-      <div class="grid text-center p-5 items-center object-center ">
-      
-      </div>
-      </div>
-      
     </div>
-    
   </div>
   </div>
 
-  <div class=" ">
-   <button
-          class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-full mt-6"
+  <div class="flex flex-row justify-center items-center">
+ <button
+          class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full mb-10 text-xl"
         >
-          Voir produits
-        </button>
- </div>
+          Voir les produits
+  </button>
+  </div>
 </template>

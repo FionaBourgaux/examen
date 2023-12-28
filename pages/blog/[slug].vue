@@ -37,13 +37,17 @@ article.value = data.value.blog;
     </div>
 
     <div class="m-10 items-center text-black">
-      <h2 class="text-3xl text-center font-sans font-bold">{{ article.titreBlog }}</h2>
+      <h2 class="text-3xl text-center font-sans font-bold">
+        {{ article.titreBlog }}
+      </h2>
 
       <p class="text-black text-2xl text-center">{{ article.date }}</p>
 
       <div class="grid text-center p-5 items-center object-center"></div>
-      <p class="text-black text-xl text-justify" v-html="article.contenuBlog.html">
-      </p>
+      <p
+        class="text-black text-xl text-justify"
+        v-html="article.contenuBlog.html"
+      ></p>
     </div>
   </div>
 

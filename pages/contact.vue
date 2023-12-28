@@ -3,7 +3,7 @@
 <section class="bg-white dark:bg-gray-900">
   <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contactez-nous</h2>
-      <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"> Vous désirez prendre contact avec Paw's and Play Vr? Remplissez ce formulaire et nous vous répondrons dans les plus brefs délais </p>
+      <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"> Vous désirez prendre contact avec Paw's and Play Vr? Remplissez ce formulaire et nous vous répondrons dans les plus brefs délais. </p>
       <form action="#" class="space-y-8">
           <div>
               <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Votre email</label>
