@@ -39,7 +39,12 @@ produits.value = data.value.produits;
 
       <div class="text-center items-center object-center text-black ">
       <h3 class="text-center text-xl"><i class="ri-money-euro-circle-line"></i> {{ produit.prix }}</h3>
-      
+       
+          <button
+          class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-full mt-6 " >
+          Voir le produit
+            </button>
+
       </div>
       <p class="text-black">{{ produit.description }}</p>
       <p class="text-black">{{ produit.caracteristique}}</p>

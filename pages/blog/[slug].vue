@@ -49,6 +49,7 @@ article.value = data.value.blog;
         v-html="article.contenuBlog.html"
       ></p>
     </div>
+    
   </div>
 
   <div v-else>

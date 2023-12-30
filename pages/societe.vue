@@ -60,14 +60,6 @@
   </div>
   </div>
 
- <TextesParagraphe class="text-center text-3xl p-10"> Explorez, jouez et connectez-vous avec Paws & Play VR, où chaque instant avec votre animal devient une aventure extraordinaire.</TextesParagraphe>
-
- <NuxtImg
-            class="aspect-square h-[70vh] w-full object-cover"
-        src="/images/logo.jpeg"
-        alt="logo"
-        />
-
         </div>
 
 </template>

@@ -1,5 +1,6 @@
 <template>
-  <TextesParagraphe class="text-center mt-10 text-xl p-10">
+  <TitresH1 class="text-black"> Nos équipes </TitresH1>
+  <TextesParagraphe class="text-center text-xl p-3">
     Chez Paws & Play VR, nous croyons que derrière chaque innovation, il y a une
     équipe dévouée prête à transformer des idées audacieuses en réalité.
     Laissez-nous vous présenter les visages créatifs et les esprits brillants
