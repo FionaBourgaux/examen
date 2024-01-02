@@ -27,6 +27,7 @@ article.value = data.value.blog;
 </script>
 
 <template>
+ 
   <div v-if="article" class="p-10">
     <div class="">
       <NuxtImg
@@ -52,7 +53,5 @@ article.value = data.value.blog;
     
   </div>
 
-  <div v-else>
-    <li>Loading...</li>
-  </div>
+
 </template>

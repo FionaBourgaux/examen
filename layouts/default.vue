@@ -20,12 +20,24 @@
         </template>
 
         <template #links>
+          <div id="#accueil">
           <LinksNavLink to="/">Accueil</LinksNavLink>
-          <LinksNavLink to="/produit">Produits</LinksNavLink>
-          <LinksNavLink to="/societe"> Société </LinksNavLink>
-          <LinksNavLink to="/equipe"> Équipe </LinksNavLink>
-          <LinksNavLink to="/contact"> Contact </LinksNavLink>
-          <LinksNavLink to="/blog"> Blog </LinksNavLink>
+          </div>
+
+          <div id="#produit">
+          <LinksNavLink to="/produit">Produits</LinksNavLink></div>
+          
+          <div id="#societe">
+          <LinksNavLink to="/societe"> Société </LinksNavLink></div>
+          
+          <div id="#equipe">
+          <LinksNavLink to="/equipe"> Équipe </LinksNavLink> </div>
+
+           <div id="#contact">
+          <LinksNavLink to="/contact"> Contact </LinksNavLink></div>
+
+          <div id="#blog">
+          <LinksNavLink to="/blog"> Blog </LinksNavLink></div>
 
 
         </template>

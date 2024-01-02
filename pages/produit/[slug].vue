@@ -29,11 +29,11 @@ produit.value = data.value.produit;
 </script>
 
 <template>
- <div v-if="produit" class="p-10 grid grid-cols-2">
-  
- <div class="">
+<div v-if="produit" class="p-10 grid grid-cols-2">
+
+  <div class="">
       <NuxtImg
-        class="shadow-xl shadow-black lg:w-1/2 mx-auto m-10 aspect-square hover:scale-110 hover:transition items-center"
+        class="shadow-xl shadow-black lg:w-1/2 mx-auto m-10 aspect-square items-center"
         :src="produit.photo.url"
         :alt="produit.nom"
       />
@@ -49,23 +49,26 @@ produit.value = data.value.produit;
       <TextesParagraphe class="" v-html="produit.caracteristique.html"> </TextesParagraphe>
 
       <div class="grid grid-cols-2 gap-16 mt-10">
+  
+      <div>
         <button
-          class=" m-18 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full mt-6"
+          class=" m-18 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-20 rounded-full mt-6"
         >
         Acheter
         </button>
-        <button
-          class=" m-18 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full mt-6"
-        >
+      </div>
+
+      <div>
+        <a href="index">
+          <button
+          class=" m-18 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-20 rounded-full mt-6"
+          >
         Retour
-        </button>
+          </button>
+        </a>
+        </div>
         </div>
     </div>
 
-  </div>
-  
-   
-  <div v-else>
-    <li>Loading...</li>
   </div>
 </template>

@@ -46,11 +46,16 @@ produits.value = data.value.produits;
 <div class="absolute text-2xl text-white top-24 pt-52" v-html="contenuAccueil.texte.html"> </div>
 </div>
 
+<div>
+<a href="societe">
 <button
           class=" bottom-40 absolute bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-12 rounded-full ml-16 text-xl"
+          
         >
           Voir plus
         </button>
+</a>
+</div>
 
 <TitresH1 class="text-black "> Découvrez l'Univers Captivant de Paws & Play VR</TitresH1>
 <TextesParagraphe class="text-center m-10 text-xl"> 
@@ -72,10 +77,14 @@ Plongez dans notre catalogue et découvrez comment Paws & Play VR transforme la 
   </div>
 
   <div class="flex flex-row justify-center items-center">
+    <div>
+      <a href="produit">
  <button
           class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full mb-10 text-xl"
         >
           Voir les produits
   </button>
+  </a>
+  </div>
   </div>
 </template>

@@ -22,6 +22,7 @@ produits.value = data.value.produits;
 </script>
 
 <template>
+  <div id="#index">
   <TitresH1> Nos produits </TitresH1>
   <TextesParagraphe class="text-center text-xl p-3"> Bienvenue dans notre showroom virtuel, où l'extraordinaire rencontre l'ordinaire pour créer des expériences qui transcendent la réalité. Chez Paws & Play VR, nous sommes fiers de présenter une gamme innovante de produits de réalité virtuelle conçus spécialement pour vos compagnons à quatre pattes.</TextesParagraphe>
  <div v-if="produits" class="p-10 grid sm:grid-cols-3 gap-8">
@@ -38,12 +39,15 @@ produits.value = data.value.produits;
       <h2 class="text-3xl text-center pb-10 font-sans text-black">{{ produit.nom }}</h2>
 
       <div class="text-center items-center object-center text-black ">
-      <h3 class="text-center text-xl"><i class="ri-money-euro-circle-line"></i> {{ produit.prix }}</h3>
+        <h3 class="text-center text-xl"><i class="ri-money-euro-circle-line"></i> {{ produit.prix }}</h3>
        
-          <button
+      <div>
+    
+          <button 
           class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-full mt-6 " >
           Voir le produit
             </button>
+            </div>
 
       </div>
       <p class="text-black">{{ produit.description }}</p>
@@ -54,5 +58,7 @@ produits.value = data.value.produits;
    
   <div v-else>
     <li>Loading...</li>
+  </div>
+
   </div>
 </template>
