@@ -1,7 +1,21 @@
 <template>
   <Head>
-    <Title>Design System</Title>
-    <Meta name="description" content="Paws & Play VR" />
+    <Title>Paws & Play VR</Title>
+    <Meta name="description" content="Bienvenue sur la société fictive de Paws & Play VR" />
+
+    <Meta
+      property="og:description"
+      content="Découverte Interactive de Paws & Play VR "
+    />
+
+    <Meta
+      property="og:url"
+      content="https://examen-fionabourgaux.vercel.app/"
+    />
+    <Meta property="og:type" content="website" />
+    <Meta property="og:locale" content="fr_FR" />
+    <Meta property="og:site_name" content="Société fictive" />
+    <Meta name="theme-color" content="#FFFFF" />
   </Head>
   <LayoutsBase>
     <template #navigation>

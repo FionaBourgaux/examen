@@ -29,6 +29,24 @@ produit.value = data.value.produit;
 </script>
 
 <template>
+  <Head v-if="produit">
+    <Title>{{ produit.nom }} - Détails du produit</Title>
+    <Meta
+      name="description"
+      :content="`Découvrez des détails sur ${produit.nom}: ${produit.description}: ${produit.caracteristique} ${produit.prix}`"
+    />
+    <Meta
+      property="og:title"
+      :content="`${produit.nom} - Détails du Pokémon`"
+    />
+    <Meta
+      property="og:description"
+      :content="`Découvrez des détails sur ${produit.nom}: ${produit.description}: ${produit.caracteristique} ${produit.prix}`"
+    />
+    <Meta property="og:image" :content="produit.photo.url" />
+    <Meta property="og:type" content="website" />
+    <Meta property="og:locale" content="fr_FR" />
+  </Head>
 <div v-if="produit" class="p-10 grid grid-cols-2">
 
   <div class="">
@@ -41,6 +59,8 @@ produit.value = data.value.produit;
 
     <div class="m-10 text-black ">
       <h2 class="text-3xl font-sans">{{ produit.nom }}</h2>
+
+
 
       <div class="grid p-5 ">
       <h3 class="text-black text-2xl"><i class="ri-money-euro-circle-line"></i> {{ produit.prix }}</h3>

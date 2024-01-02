@@ -27,7 +27,24 @@ article.value = data.value.blog;
 </script>
 
 <template>
- 
+ <Head v-if="article">
+    <Title>{{ article.titreBlog }} - Détails de l'article</Title>
+    <Meta
+      name="description"
+      :content="`Découvrez des détails sur ${article.titreBlog}: ${article.contenuBlog}: ${article.date} `"
+    />
+    <Meta
+      property="og:title"
+      :content="`${article.titreBlog} - Détails du Pokémon`"
+    />
+    <Meta
+      property="og:description"
+      :content="`Découvrez des détails sur ${article.titreBlog}: ${article.contenuBlog}: ${article.date}`"
+    />
+    <Meta property="og:image" :content="article.imageBlog.url" />
+    <Meta property="og:type" content="website" />
+    <Meta property="og:locale" content="fr_FR" />
+  </Head>
   <div v-if="article" class="p-10">
     <div class="">
       <NuxtImg
